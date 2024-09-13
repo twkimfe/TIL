@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>연습문제 2</title>
-	<style>
-		body {
-			font-size:1.2em;
-			text-align:center;
-		}
-		p {
-			color: #f00;
-			font-weight: bold;
-		}
-	</style>
 </head>
+
 <body>
-	<h2>3의 배수 찾기</h2>
+	<script>
+		var num1 = parseInt(prompt("비교할 첫 번째 숫자"));
+		var num2 = parseInt(prompt("비교할 두 번쨰 숫자"));
 
-<script>
-		var userNumber = prompt("몇 까지 3의 배수를 찾을까요?","100");	//	메세지 취소 체크용
-		var userNumber2 = parseInt(userNumber)	//	내부 계산용
-		var count = 0;	//	카운터
-		var i;	//	내부 계산 값
-		
-		if (userNumber !== null) {	//	취소 버튼 체크
-			for (i = 1; i <= userNumber2; i++) {
-				if (i % 3 === 0) {
-					document.write(i + ", ");
-					count++;
-				}
+		comp(num1, num2);
+
+		function comp(x, y) {
+			if (x === y) {
+				alert("두 수는 같습니다.")
 			}
-			document.write("<p>" + userNumber2 + "까지 3의 배수의 갯수 : " + count + "</p>");
+			else if (x > y) {
+				alert(x + "((이)가 )" + y + "보다 큽니다.")
+			}
+			else {
+				alert(y + "((이)가 )" + x + "보다 큽니다.")
+			}
 		}
+	</script>
 
-		else
-			alert("입력이 취소 되었습니다.")
-</script>
 </body>
+
 </html>
